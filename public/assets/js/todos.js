@@ -1,1 +1,0 @@
-// insert HTML-related jQuery onclick and ajax events

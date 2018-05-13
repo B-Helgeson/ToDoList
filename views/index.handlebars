@@ -1,0 +1,38 @@
+<h1>todos!</h1>
+
+<h2>todos that are not yet completed!</h2>
+
+<ul>
+  {{#each todos}}
+    {{#unless completed}}
+      {{> todos/todo-block done=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>todos that are completed!</h2>
+
+<ul>
+  {{#each todos}}
+    {{#if completed}}
+      {{> todos/todo-block done=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a todo</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">todo Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="completed">completed?</label><br>
+    <input type="radio" name="completed" value="1" checked> Completed!<br>
+    <input type="radio" name="completed" value="0"> In Progress
+  </div>
+
+  <button type="submit">Add todo</button>
+</form>
