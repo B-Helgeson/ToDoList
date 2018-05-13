@@ -3,10 +3,9 @@ A "to do" list application
 
 Deviates from the "Eat Da Burger" project, with a more practical application.
 
+## Heroku App 
 
-
-
-
+[Click Here to Try it Out](https://bhelgeson-todolist.herokuapp.com/)
 
 
 #### Technologies used in this Project
