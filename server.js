@@ -1,7 +1,7 @@
 const   express = require("express"),
         bodyParser = require("body-parser"),
+        app = express(),
         PORT = process.env.PORT || 3000,
-        app = express();
         exphbs = require("express-handlebars"),
         routes = require("./controllers/todo_controller.js");
 
