@@ -7,7 +7,6 @@ const   orm = require("../config/orm.js"),
                     cb(res);
                     });
                 },
-                // The variables cols and vals are arrays.
                 create: function(cols, vals, cb) {
                     orm.create("todos", cols, vals, function(res) {
                     cb(res);
@@ -20,6 +19,5 @@ const   orm = require("../config/orm.js"),
                 }
         };
         
-
 // Export the database functions for the controller (todo_controller.js).
 module.exports = todo;
