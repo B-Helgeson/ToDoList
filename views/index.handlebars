@@ -4,38 +4,36 @@
 
 <div id="todotasks">
 
-          <!-- Dynamically Insert tasks here -->
-          {{#each todos}} <!-- loop thru all todolists -->
-            {{#unless this.completed}} <!-- format only incomplete ones, boolean false -->
+          {{#each todos}} 
+            {{#unless this.completed}} 
               <form action="/todolist/update/{{this.id}}" method="POST">
                 <div class="input-group todoDone">
                   <li class="form-control todoTrim">{{this.name}}</li>
                   <span class="input-group-btn">
                     <button class="btn btn-success chgtaskButton" type="submit">Complete</button>
                   </span>
-                </div> <!-- end class=input-group todoDone -->
-              </form> <!-- end form -->
-            {{/unless}} <!-- end unless -->
-          {{/each}} <!-- end each -->
-        </div>  <!-- end todotasks -->
+                </div>
+              </form> 
+            {{/unless}}
+          {{/each}}
+        </div> 
 
 <h2>Todos that you handled like a boss</h2>
 
         <div id="already_completed">
-          <!-- Dynamically Insert completed tasks Here -->
-          {{#each todos}} <!-- loop thru all todolists -->
-            {{#if this.completed}} <!-- format only complete ones, boolean true -->
+          {{#each todos}} 
+            {{#if this.completed}}
               <form action="/todolist/delete/{{this.id}}" method="POST">
                 <div class="input-group todoDone">
                   <li class="form-control todoTrim">{{this.name}}</li>
                   <span class="input-group-btn">
                       <button class="btn btn-success addtaskButton" id={{id}} type="submit">Delete</button>
                   </span>
-                </div>  <!-- end class=form-control todoTrim -->
-              </form> <!-- end form -->
-            {{/if}} <!-- end if -->         
-          {{/each}} <!-- end each -->
-        </div> <!-- end already_completed -->
+                </div>  
+              </form> 
+            {{/if}}       
+          {{/each}} 
+        </div> 
 
 <h2>Add a todo</h2>
 <form class="create-form">
