@@ -28,7 +28,7 @@ $(function() {
       event.preventDefault();
   
       var newtodo = {
-        name: $("#ca").val().trim(),
+        name: $("#name").val().trim(),
         completed: $("[name=completed]:checked").val().trim()
       };
   
